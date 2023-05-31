@@ -13,7 +13,7 @@ class MyTheme {
   static ThemeData LightTheme = ThemeData(
       primaryColor: LightPrimary,
       appBarTheme: AppBarTheme(
-        backgroundColor: LightPrimary,
+        backgroundColor: Colors.green,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(25),

@@ -12,14 +12,18 @@ class CategoriesWidget extends StatelessWidget {
       child: Column(
        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text("Pick up your categor"),
-          SizedBox(height: 12,),
+          Text("Pick up your categor ",
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 65,),
           
           Expanded(
+
             child: GridView.builder(
+
               shrinkWrap: true,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, mainAxisExtent: 18, crossAxisSpacing: 18),
+                  crossAxisCount: 2, mainAxisSpacing: 18, crossAxisSpacing: 18),
               itemBuilder: ((context, index) {
                 return CategoryItemWidget(
                     index: index, category: categorylist[index]);
