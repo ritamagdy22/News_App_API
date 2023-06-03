@@ -17,12 +17,12 @@ class SourceResponse {
     if (json['sources'] != null) {
       sources = [];
       json['sources'].forEach((v) {
-        sources?.add(Sources.fromJson(v));
+        sources?.add(Source.fromJson(v));
       });
     }
   }
   String? status;
-  List<Sources>? sources;
+  List<Source>? sources;
   String?message;
   String? code;
 
@@ -45,8 +45,8 @@ class SourceResponse {
 /// language : "en"
 /// country : "us"
 
-class Sources {
-  Sources({
+class Source {
+  Source({
       this.id, 
       this.name, 
       this.description, 
@@ -55,7 +55,7 @@ class Sources {
       this.language, 
       this.country,});
 
-  Sources.fromJson(dynamic json) {
+  Source.fromJson(dynamic json) {
     id = json['id'];
     name = json['name'];
     description = json['description'];

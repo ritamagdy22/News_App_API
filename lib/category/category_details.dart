@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news/model/SourceREsponse.dart';
 import 'package:news/settings/api_manager.dart';
+import 'package:news/tabs/Tab_BAr_Container.dart';
 
 class CategoryDetails extends StatelessWidget {
 
@@ -15,7 +16,8 @@ static const String routename = "Category_Details";
        return Center(
        child:  CircularProgressIndicator(),
        );
-    }else if (snapshot.hasError){
+    }
+     else if (snapshot.hasError){
        return Column(
 
        children: [
@@ -36,13 +38,10 @@ static const String routename = "Category_Details";
     );
     }
 
-     var sourcelist = snapshot.data?.sources??[];
-     return ListView.builder(
-    itemBuilder: (context,index){
-     return Text(sourcelist[index].name ?? '');
-    },
-    itemCount: sourcelist.length,
-    );
+     var sourceslist = snapshot.data?.sources??[];
+     return TabContainer(sourceList: sourceslist);
+
+
 
     })
 

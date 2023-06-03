@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
         child: HomeDrawer(),
       ),
 
-      body: CategoriesWidget(),
+      body: CategoryDetails(),
 
     );
   }

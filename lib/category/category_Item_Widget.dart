@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import '../model/category.dart';
 
 class CategoryItemWidget extends StatelessWidget {
@@ -9,16 +10,19 @@ class CategoryItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+
       decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
         topLeft: Radius.circular(12),
         topRight: Radius.circular(12),
         bottomRight: Radius.circular(index % 2 != 0 ? 0 : 12),
         bottomLeft: Radius.circular(index % 2 == 0 ? 0 : 12),
+
       )),
       child: Expanded(
         child: Column(
-          children: [Image.asset(category.imagePath), Text(category.title)],
+          children: [Image.asset(category.imagePath), Text(category.title)
+          ],
         ),
       ),
     );
