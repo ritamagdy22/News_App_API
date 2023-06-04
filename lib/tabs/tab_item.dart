@@ -5,7 +5,7 @@ import 'package:news/model/SourceREsponse.dart';
 
 class TabItem extends StatelessWidget {
 
-  Source source;
+   Source source;
    bool isSelected;
 
 TabItem({required this.source, required this.isSelected});
@@ -16,7 +16,7 @@ TabItem({required this.source, required this.isSelected});
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(12),
       color:  isSelected ? Theme.of(context).primaryColor: Colors.orangeAccent,
-border: Border.all(color: Theme.of(context).primaryColor)
+      border: Border.all(color: Theme.of(context).primaryColor)
     ),
 
     child: Text(source.name?? '',
