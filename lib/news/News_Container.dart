@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news/model/NewsResources.dart';
 import 'package:news/model/SourceREsponse.dart';
+import 'package:news/news/News_Item.dart';
 import 'package:news/settings/api_manager.dart';
 import '../tabs/Tab_BAr_Container.dart';
 
@@ -43,7 +44,7 @@ class NewsContainer extends StatelessWidget {
 
           return ListView.builder(
               itemBuilder: ((context, index) {
-                return Text(newList[index].title ?? "");
+                return NewsItem(news: newList[index]);
               }),
             itemCount: newList.length,
 
