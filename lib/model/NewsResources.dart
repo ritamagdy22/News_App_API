@@ -8,10 +8,15 @@ class NewsResources {
   NewsResources({
       this.status, 
       this.totalResults, 
-      this.articles,});
+      this.articles,
+      this.message,
+       this.code});
 
   NewsResources.fromJson(dynamic json) {
     status = json['status'];
+    code = json['code'];
+    message = json['message'];
+
     totalResults = json['totalResults'];
     if (json['articles'] != null) {
       articles = [];
@@ -23,6 +28,9 @@ class NewsResources {
   String? status;
   num? totalResults;
   List<News>? articles;
+  String? code;
+  String? message;
+
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
