@@ -6,9 +6,10 @@ class Manager {
   static const String baseUrl = "newsapi.org";
 
   // https://newsapi.org/v2/top-headlines/sources?apiKey=db9bff9ebc33443abd83acf3101c7fb3
-  static Future<SourceResponse>getSource() async {
+  static Future<SourceResponse>getSource(String CategoryId) async {
     var url = Uri.https(baseUrl,'/v2/top-headlines/sources', {
-          "apiKey" : "db9bff9ebc33443abd83acf3101c7fb3"
+          "apiKey" : "db9bff9ebc33443abd83acf3101c7fb3",
+      "category":CategoryId
         }
     );
     try{

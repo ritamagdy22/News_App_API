@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:news/model/SourceREsponse.dart';
+import 'package:news/model/category.dart';
 import 'package:news/settings/api_manager.dart';
 import 'package:news/tabs/Tab_BAr_Container.dart';
 
 class CategoryDetails extends StatelessWidget {
   static const String routename = "Category_Details";
+  Category1? category;
+  CategoryDetails({this.category});
+
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<SourceResponse>(
-        future: Manager.getSource(),
+        future: Manager.getSource(category?.id?? ''),
         builder: ((context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(

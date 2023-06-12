@@ -2,6 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeDrawer extends StatelessWidget {
+
+  // we have added default values for the null safety
+  static const Categories =1;
+  static const settings =2;
+
+  Function Onside;
+  HomeDrawer({required this.Onside});
+
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,7 +30,11 @@ class HomeDrawer extends StatelessWidget {
         ),
         Padding(padding: EdgeInsets.all(10)),
         InkWell(
-          onTap: () {},
+          onTap: () {
+
+            Onside(Categories);
+
+          },
           child: Row(
             children: [
               Icon(Icons.list),
@@ -37,7 +50,11 @@ class HomeDrawer extends StatelessWidget {
         ),
         Padding(padding: EdgeInsets.all(5)),
         InkWell(
-          onTap: () {},
+          onTap: () {
+
+            Onside(settings);
+
+          },
           child: Row(
             children: [
               Icon(Icons.settings),

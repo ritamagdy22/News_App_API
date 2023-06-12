@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news/category/category_details.dart';
-import 'package:news/homescreen.dart';
+import 'package:news/Home/homescreen.dart';
 import 'package:news/model/MyTheme.dart';
 
 void main (){
