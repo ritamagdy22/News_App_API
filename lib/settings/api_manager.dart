@@ -5,11 +5,12 @@ import 'package:news/model/SourceREsponse.dart';
 class Manager {
   static const String baseUrl = "newsapi.org";
 
-  // https://newsapi.org/v2/top-headlines/sources?apiKey=db9bff9ebc33443abd83acf3101c7fb3
+  //https://newsapi.org/v2/everything?q=bitcoin&apiKey=db9bff9ebc33443abd83acf3101c7fb3
   static Future<SourceResponse>getSource(String CategoryId) async {
     var url = Uri.https(baseUrl,'/v2/top-headlines/sources', {
           "apiKey" : "db9bff9ebc33443abd83acf3101c7fb3",
-      "category":CategoryId
+          "category":CategoryId
+      // hab3t al category 3shan yfra2 ban kolo
         }
     );
     try{
@@ -30,6 +31,7 @@ class Manager {
   }
 
 // future of newsresponse : 3shan msh damna al server hayrod 3alia ba eh aw amta
+
   static Future<NewsResources> getNews(String sourceId)async{
 
     //GET https://newsapi.org/v2/everything?apiKey=db9bff9ebc33443abd83acf3101c7fb3
@@ -40,7 +42,7 @@ class Manager {
 
     var url = Uri.https(baseUrl , "/v2/everything",
     {
-      "apiKey ": "db9bff9ebc33443abd83acf3101c7fb3",
+      "apiKey": "db9bff9ebc33443abd83acf3101c7fb3",
 
       // lama ad8at 3al tab ( source Id) yb2a habasih le function
       //parameter  ( lama ados ywdini 3al haga al 3izaaha )
@@ -59,5 +61,6 @@ try{
   throw e;
 }
   }
+
 
 }

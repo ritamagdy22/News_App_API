@@ -7,8 +7,8 @@ class HomeDrawer extends StatelessWidget {
   static const Categories =1;
   static const settings =2;
 
-  Function Onside;
-  HomeDrawer({required this.Onside});
+  Function OnItemSideMenue;
+  HomeDrawer({required this.OnItemSideMenue});
 
 
   @override
@@ -32,7 +32,7 @@ class HomeDrawer extends StatelessWidget {
         InkWell(
           onTap: () {
 
-            Onside(Categories);
+            OnItemSideMenue(Categories);
 
           },
           child: Row(
@@ -52,7 +52,7 @@ class HomeDrawer extends StatelessWidget {
         InkWell(
           onTap: () {
 
-            Onside(settings);
+            OnItemSideMenue(settings);
 
           },
           child: Row(

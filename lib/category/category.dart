@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//class model le kol details al category al wahid (id bg asm )
 class Category1 {
   String id;
   String title;
@@ -22,12 +22,12 @@ class Category1 {
           id: "Science",
           title: "Science",
           imagePath: 'assets/images/science.png',
-          backgroundcolor: Colors.white10),
+          backgroundcolor: Colors.cyanAccent),
       Category1(
           id: "politics",
           title: "politics",
           imagePath: 'assets/images/politics.png',
-          backgroundcolor: Colors.lightBlueAccent),
+          backgroundcolor: Colors.blueGrey),
       Category1(
           id: "healths",
           title: "health",

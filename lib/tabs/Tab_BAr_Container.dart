@@ -19,11 +19,15 @@ class _TabContainerState extends State<TabContainer> {
       child: Column(
         children: [
           TabBar(
+            indicatorColor: Colors.transparent,
+            isScrollable: true,
             onTap: (index) {
               selected = index;
               setState(() {});
             },
+            // al source 7aweltha le list mn al tabs
             tabs: widget.sourceList.map((source) => TabItem(source: source,
+                    // bab3t al source al byt3mlo map
                     isSelected: selected == widget.sourceList.indexOf(source))).toList(),
           ),
           Expanded(child: NewsContainer(source: widget.sourceList[selected]))
