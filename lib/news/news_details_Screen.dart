@@ -1,50 +1,64 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:news/model/NewsResources.dart';
-import 'package:news/news/news_details_Screen.dart';
 
-class NewsItem extends StatelessWidget {
-  //object mn class al news
-  News news;
-  NewsItem({required this.news});
+class NewsDetailsScreen extends StatelessWidget {
+  static const RouteName = "NewsDetailsScreen";
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: ()=> Navigator.of(context).pushNamed(NewsDetailsScreen.RouteName,arguments: news),
-      child: Column(
+    var news = ModalRoute.of(context)!.settings.arguments as News;
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Container(
             margin: EdgeInsets.all(12),
-            padding: EdgeInsets.all(10),
-            height: 220,
-
             // 7tete al round al fl sora
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
-
-
 
             child: Image.network(news.urlToImage ?? ''),
           ),
           Text(
             news.author ?? '',
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(
+              fontSize: 12,
+            ),
+            textAlign: TextAlign.end,
           ),
           Text(
             news.title ?? '',
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 18),
           ),
           Text(
             news.publishedAt ?? '',
             style: TextStyle(fontSize: 12),
             textAlign: TextAlign.end,
           ),
+          SizedBox(height: 40),
+          Text(news.description ?? ''),
+
+          SizedBox(height: 10),
+
+        Row(
+          children: [
+            TextButton.icon(
+              onPressed: (){},
+                label: Text("View more about the article"),
+              icon: Icon(Icons.arrow_back_ios_sharp),
+
+
+            ),
+
+
+
+          ],
+
+        )
+
         ],
       ),
     );
   }
 }
-
-
