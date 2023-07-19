@@ -20,8 +20,8 @@ padding: EdgeInsets.symmetric(vertical: 8, horizontal: 24),
 
       borderRadius: BorderRadius.circular(22),
       // 3shan al selected tabs n7ded lonha
-      color:  isSelected ? Theme.of(context).primaryColor: Colors.grey,
-      border: Border.all(color: Theme.of(context).primaryColor)
+      color:  isSelected ? Theme.of(context).primaryColorDark: Colors.blueGrey,
+      border: Border.all(color: Theme.of(context).focusColor)
     ),
 
     child: Text(source.name?? '',

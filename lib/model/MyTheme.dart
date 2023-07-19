@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class MyTheme {
-  static Color LightPrimary = Color(0xFFB7935F);
+  static Color LightPrimary = Colors.grey;
   static Color colorwhite = Colors.white;
   static Color colorblack = Colors.black45;
   static Color green = Colors.green;
-  static Color red = Color(0xffc91c22);
+  static Color red = Colors.red;
   static Color pink = Colors.pinkAccent;
   static Color yellow = Colors.yellow;
   static Color blue = Colors.lightBlueAccent;
@@ -13,7 +13,7 @@ class MyTheme {
   static ThemeData LightTheme = ThemeData(
       primaryColor: LightPrimary,
       appBarTheme: AppBarTheme(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blueGrey,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(25),

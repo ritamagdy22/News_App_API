@@ -16,7 +16,7 @@ class HomeDrawer extends StatelessWidget {
     return Column(
       children: [
         Container(
-          color: CupertinoColors.systemGreen,
+          color: CupertinoColors.inactiveGray,
           width: double.infinity,
           padding: EdgeInsets.symmetric(vertical: 64),
           child: Padding(
@@ -51,9 +51,7 @@ class HomeDrawer extends StatelessWidget {
         Padding(padding: EdgeInsets.all(5)),
         InkWell(
           onTap: () {
-
             OnItemSideMenue(settings);
-
           },
           child: Row(
             children: [

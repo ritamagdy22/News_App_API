@@ -19,7 +19,7 @@ class _TabContainerState extends State<TabContainer> {
       child: Column(
         children: [
           TabBar(
-            indicatorColor: Colors.transparent,
+            indicatorColor: Colors.green,
             isScrollable: true,
             onTap: (index) {
               selected = index;
