@@ -13,7 +13,7 @@ class NewsContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return FutureBuilder<NewsResources>
       (
-        future: Manager.getNews(source.id??''),
+        future: Manager.getNews(sourceId: source.id??''),
         builder: ((context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(

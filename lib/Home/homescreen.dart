@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news/Home/Drawer.dart';
+import 'package:news/Home/SearchDelegete.dart';
 import 'package:news/category/category_details.dart';
 import 'package:news/category/catgegors_Widget.dart';
 import '../category/category.dart';
@@ -22,7 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           centerTitle: true,
           actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.search, size: 32,))
+            IconButton(onPressed: ()=>showSearch(context: context, delegate: NewsSearch()),
+                icon: Icon(Icons.search, size: 32,))
           ],
 
         ),

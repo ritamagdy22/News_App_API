@@ -32,7 +32,7 @@ class Manager {
 
 // future of newsresponse : 3shan msh damna al server hayrod 3alia ba eh aw amta
 
-  static Future<NewsResources> getNews(String sourceId)async{
+  static Future<NewsResources> getNews({String? sourceId, String? Keyword})async{
 
     //GET https://newsapi.org/v2/everything?apiKey=db9bff9ebc33443abd83acf3101c7fb3
 
@@ -43,10 +43,10 @@ class Manager {
     var url = Uri.https(baseUrl , "/v2/everything",
     {
       "apiKey": "db9bff9ebc33443abd83acf3101c7fb3",
-
       // lama ad8at 3al tab ( source Id) yb2a habasih le function
       //parameter  ( lama ados ywdini 3al haga al 3izaaha )
        "sources" : sourceId,
+        "q":Keyword
   }
     );
 try{
