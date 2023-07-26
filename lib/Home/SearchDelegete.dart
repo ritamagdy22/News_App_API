@@ -10,7 +10,7 @@ class NewsSearch extends SearchDelegate {
     // TODO: implement buildActions
     return [
       IconButton(
-          onPressed: () {},
+          onPressed: () =>showResults(context),
           icon: Icon(
             Icons.search,
             size: 25,
